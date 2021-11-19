@@ -25,6 +25,7 @@ class CompressInt
             // subtract what we have added to the compressed string
             $num = (int)floor(($num - $r) / $radix);
         }
+
         return implode('', $out);
     }
 
@@ -44,6 +45,7 @@ class CompressInt
             $out += $partialSum;
             $i++;
         }
+
         return $out;
     }
 }
