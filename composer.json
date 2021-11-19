@@ -1,21 +1,21 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "lenny4/compress-int",
+    "description": "Compress integer into alphanumeric",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "Lenny4",
+        "compress-int"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/lenny4/compress-int",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Alexandre Beaujour",
+            "email": "alexandre.beaujour@hotmail.fr",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0"
+        "php": ">=7.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Lenny4\\CompressInt\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Lenny4\\CompressInt\\Tests\\": "tests"
         }
     },
     "scripts": {
