@@ -5,7 +5,10 @@ namespace Lenny4\CompressInt;
 // https://stackoverflow.com/questions/20160413/how-to-compress-a-very-large-number-into-alphanumeric-in-php
 class CompressInt
 {
-    public const DEFAULT_SYMBOLS = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    public const DEFAULT_SYMBOLS_INSENSITIVE = '0123456789abcdefghijklmnopqrstuvwxyz';
+    public const DEFAULT_SYMBOLS = self::DEFAULT_SYMBOLS_INSENSITIVE . 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    public const LONG_SYMBOLS = self::DEFAULT_SYMBOLS . '!#$%&()*+,-/:;<=>?@[\]^_{|}~';
+    public const LONG_SYMBOLS_INSENSITIVE = self::DEFAULT_SYMBOLS_INSENSITIVE . '!#$%&()*+,-/:;<=>?@[\]^_{|}~';
 
     public static function compress(int $num, string $symbols = self::DEFAULT_SYMBOLS): string
     {

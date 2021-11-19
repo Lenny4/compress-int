@@ -24,9 +24,12 @@ $compress = Lenny4\CompressInt::compress($number, $customSymbols);
 $decompress = Lenny4\CompressInt::decompress($compress, $customSymbols);
 ```
 
-Default symbols:
+Symbols:
 ```php
 Lenny4\CompressInt::DEFAULT_SYMBOLS // 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+Lenny4\CompressInt::LONG_SYMBOLS // 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-/:;<=>?@[\]^_{|}~
+Lenny4\CompressInt::DEFAULT_SYMBOLS_INSENSITIVE // 0123456789abcdefghijklmnopqrstuvwxyz
+Lenny4\CompressInt::LONG_SYMBOLS_INSENSITIVE // 0123456789abcdefghijklmnopqrstuvwxyz!#$%&()*+,-/:;<=>?@[\]^_{|}~
 ```
 
 ## Testing
