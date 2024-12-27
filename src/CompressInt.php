@@ -10,7 +10,7 @@ class CompressInt
     public const LONG_SYMBOLS = self::DEFAULT_SYMBOLS . '!#$%&()*+,-/:;<=>?@[\]^_{|}~';
     public const LONG_SYMBOLS_INSENSITIVE = self::DEFAULT_SYMBOLS_INSENSITIVE . '!#$%&()*+,-/:;<=>?@[\]^_{|}~';
 
-    public static function compress(int $num, string $symbols = self::DEFAULT_SYMBOLS): string
+    public static function compress(int|float $num, string $symbols = self::DEFAULT_SYMBOLS): string
     {
         // get the radix that we are working with
         $radix = strlen($symbols);
@@ -32,7 +32,7 @@ class CompressInt
         return implode('', $out);
     }
 
-    public static function decompress(string $compressNumber, string $symbols = self::DEFAULT_SYMBOLS): int
+    public static function decompress(string $compressNumber, string $symbols = self::DEFAULT_SYMBOLS): int|float
     {
         //get length of the char map, so you can change according to your needs
         $radix = strlen($symbols);
